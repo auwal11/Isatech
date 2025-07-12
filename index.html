@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF="8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA YAHAYA TECH COMMUNICATION SERVICES</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logo.jpg" type="image/jpeg"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -14,8 +15,8 @@
         <div class="container">
             <div class="logo">
                 <img src="logo.jpg" alt="ISA YAHAYA Tech Communication Services Logo">
-                </div>
-            <nav class="navbar">
+            </div>
+            <nav class="navbar" id="navMenu">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -24,6 +25,9 @@
                 </ul>
             </nav>
             <a href="#contact" class="contact-button-nav">Contact Us</a>
+            <button class="hamburger-menu" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -34,7 +38,7 @@
                 <p>Your trusted partner for seamless network installations, innovative content creations, and reliable computer accessories.</p>
                 <a href="#services" class="button primary">Explore Our Services</a>
             </div>
-            </div>
+        </div>
     </section>
 
     <section id="about" class="about-us">
@@ -91,7 +95,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="logo.jpg" alt="ISA YAHAYA Logo">
-                    </div>
+                </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -112,13 +116,33 @@
                     <a href="https://www.facebook.com/yahaya.isah.zubairu.2024" target="_blank">
                         <img src="Facebook.jpg" alt="Facebook">
                     </a>
-                    </div>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 ISA YAHAYA TECH COMMUNICATION SERVICES. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu');
+            const navMenu = document.getElementById('navMenu');
+
+            hamburgerButton.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburgerButton.classList.toggle('active'); // Don canza icon (optional)
+            });
+
+            // Rufe menu idan aka danna wani link a ciki
+            document.querySelectorAll('#navMenu ul li a').forEach(item => {
+                item.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburgerButton.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
