@@ -63,26 +63,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Domin matsayin hamburger menu */
 }
 
 .header .logo {
     display: flex;
     align-items: center;
-    font-weight: 700;
-    font-size: 24px;
-    color: #2c3e50;
 }
 
 .header .logo img {
     height: 40px; /* Adjust as needed */
-    margin-right: 10px;
-}
-
-.header .logo .logo-subtext {
-    font-size: 14px;
-    font-weight: 400;
-    color: #7f8c8d; /* Gray */
-    margin-left: 5px;
+    margin-right: 10px; 
 }
 
 .header .navbar ul {
@@ -112,10 +103,20 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    /* Don boyewa a mobile */
+    display: none; 
 }
 
-.header .contact-button-nav:hover {
-    background-color: #2980b9;
+/* AN KARA NAN: Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* A ɓoye shi a kan manyan screens */
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001; /* Domin ya fito sama da komai */
 }
 
 /* Hero Section */
@@ -310,13 +311,7 @@ a {
 
 .footer .footer-logo img {
     height: 40px; /* Adjust as needed */
-    margin-right: 10px;
-}
-
-.footer .footer-logo .logo-subtext {
-    font-size: 14px;
-    font-weight: 400;
-    color: #bdc3c7; /* Light gray */
+    margin-right: 10px; 
 }
 
 .footer h4 {
@@ -378,22 +373,52 @@ a {
 /* Basic Responsiveness (for smaller screens) */
 @media (max-width: 768px) {
     .header .container {
+        flex-direction: row; /* A bar su a layi don mobile idan ba hamburger menu bane */
+        justify-content: space-between; /* Raba su */
+        align-items: center;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%; /* Kasa da header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: none; /* A ɓoye ta ta default */
         flex-direction: column;
-        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .header .navbar.active {
+        display: flex; /* Nuna navbar idan "active" class tana nan */
     }
 
     .header .navbar ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     .header .navbar ul li {
-        margin: 0 15px 10px;
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .header .navbar ul li:last-child {
+        border-bottom: none;
     }
 
     .header .contact-button-nav {
-        margin-top: 15px;
+        /* Za mu iya nuna shi a cikin menu na hamburger ko mu ɓoye shi gaba daya a mobile */
+        /* display: block; */ /* Idan kana son ya fito a cikin menu */
+        display: none; /* A ɓoye shi gaba daya a mobile idan ba a cikin menu bane */
+    }
+
+    .hamburger-menu {
+        display: block; /* Nuna hamburger menu a mobile */
     }
 
     .hero-content h1 {
