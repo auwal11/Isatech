@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - ISA YAHAYA TECH COMMUNICATION SERVICES</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.jpg" type="image/jpeg"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <p class="welcome-text">Welcome to</p> 
+            <div class="logo">
+                <img src="logo.jpg" alt="ISA YAHAYA Tech Communication Services Logo">
+            </div>
+            <nav class="navbar" id="navMenu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li> <li><a href="index.html#about">About Us</a></li> <li><a href="#services">Services</a></li> <li><a href="index.html#contact">Contact Us</a></li> </ul>
+            </nav>
+            <a href="index.html#contact" class="contact-button-nav">Contact Us</a> <button class="hamburger-menu" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="services-intro" class="hero" style="padding: 60px 0;">
+            <div class="container" style="text-align: center;">
+                <h1 style="font-size: 40px; margin-bottom: 10px;">Our Comprehensive Services</h1>
+                <p style="font-size: 18px; max-width: 800px; margin: 0 auto;">At ISA YAHAYA TECH COMMUNICATION SERVICES, we offer a range of specialized solutions designed to meet your every technological need.</p>
+            </div>
+        </section>
+
+        <section id="network" class="service-detail">
+            <div class="container">
+                <div class="service-detail-content">
+                    <img src="network.jpg" alt="Network Installation Icon" class="detail-icon">
+                    <h2>Network Installations</h2>
+                    <p>We provide expert network installation services, ensuring seamless and secure connectivity for both homes and businesses. Our team handles everything from initial planning and setup to ongoing maintenance and troubleshooting. We specialize in wired and wireless networks, ensuring optimal performance and reliability for all your devices.</p>
+                    <ul>
+                        <li>Local Area Network (LAN) Setup</li>
+                        <li>Wireless Network (Wi-Fi) Configuration</li>
+                        <li>Network Security Implementation</li>
+                        <li>Cable Management and Infrastructure</li>
+                        <li>Network Troubleshooting and Optimization</li>
+                    </ul>
+                    <a href="index.html#contact" class="button primary">Get a Network Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="content" class="service-detail odd-section">
+            <div class="container">
+                <div class="service-detail-content">
+                    <img src="content.jpg" alt="Content Creation Icon" class="detail-icon">
+                    <h2>Content Creations</h2>
+                    <p>Captivate your audience with compelling and high-quality digital content. Our content creation services are designed to help you communicate effectively and enhance your online presence. From engaging website copy to stunning visuals, we bring your ideas to life.</p>
+                    <ul>
+                        <li>Website Content Writing</li>
+                        <li>Blog Post Creation</li>
+                        <li>Social Media Content Design</li>
+                        <li>Graphic Design for Digital Marketing</li>
+                        <li>Video Content Production (Basic)</li>
+                    </ul>
+                    <a href="index.html#contact" class="button secondary">Request Content Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessories" class="service-detail">
+            <div class="container">
+                <div class="service-detail-content">
+                    <img src="computer.jpg" alt="Computer Accessories Icon" class="detail-icon">
+                    <h2>Computer Accessories Sales</h2>
+                    <p>Find genuine and reliable computer accessories at competitive prices. We offer a wide selection of essential peripherals and components to enhance your computing experience. Our products are sourced from trusted manufacturers, ensuring durability and performance.</p>
+                    <ul>
+                        <li>Keyboards and Mice</li>
+                        <li>Monitors and Displays</li>
+                        <li>Printers and Scanners</li>
+                        <li>Storage Devices (HDD, SSD)</li>
+                        <li>Networking Hardware (Routers, Switches)</li>
+                        <li>Cables and Adapters</li>
+                    </ul>
+                    <a href="index.html#contact" class="button primary">View Accessories</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="ISA YAHAYA Logo">
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#services-intro">Services</a></li> <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>NO. 6 ISA'S SHOP KWANAR GADARA ALONG MOHD IDRISS WAY, POTISKUM, YOBE STATE.</p>
+                    <p>Email: <a href="mailto:isacommunicationtech@gmail.com">isacommunicationtech@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+2348163441492">+234 816 344 1492</a></p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/yahaya.isah.zubairu.2024" target="_blank">
+                        <img src="Facebook.jpg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ISA YAHAYA TECH COMMUNICATION SERVICES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu');
+            const navMenu = document.getElementById('navMenu');
+
+            hamburgerButton.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburgerButton.classList.toggle('active'); 
+            });
+
+            document.querySelectorAll('#navMenu ul li a').forEach(item => {
+                item.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburgerButton.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
