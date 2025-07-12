@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF="8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISA YAHAYA TECH COMMUNICATION SERVICES</title>
     <link rel="stylesheet" href="style.css">
@@ -13,6 +13,7 @@
 
     <header class="header">
         <div class="container">
+            <p class="welcome-text">Welcome to</p> 
             <div class="logo">
                 <img src="logo.jpg" alt="ISA YAHAYA Tech Communication Services Logo">
             </div>
@@ -131,10 +132,9 @@
 
             hamburgerButton.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
-                hamburgerButton.classList.toggle('active'); // Don canza icon (optional)
+                hamburgerButton.classList.toggle('active'); 
             });
 
-            // Rufe menu idan aka danna wani link a ciki
             document.querySelectorAll('#navMenu ul li a').forEach(item => {
                 item.addEventListener('click', () => {
                     navMenu.classList.remove('active');
